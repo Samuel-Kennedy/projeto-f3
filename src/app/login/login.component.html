@@ -1,25 +1,34 @@
 <div class="container">
     <div class="login-section">
         <div class="logo">
-            <p>Logo Aqui</p>
+            <img src="assets/logo-navega.png" alt="Descrição da imagem" class="minha-imagem">
         </div>
         <section class="welcome-section">
-            <h1>Boas-vindas ao Portal!</h1>
-            <p>Para começar, qual seu email ou CPF?</p>
-            <p>Precisamos desta confirmação para dar início ao seu acesso.</p>
+            <h1 class="tituloLogin">Boas-vindas ao Portal! <br>Para começar, qual seu email ou CPF?</h1>
+            <p class="paragrafoLogin">Precisamos desta confirmação para dar início ao seu acesso.</p>
         </section>
-        <form>
-            <label for="emailCpf">Email ou CPF</label>
-            <input type="text" id="emailCpf" placeholder="Digite seu email ou CPF" />
 
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="Digite sua senha" />
+        <form class="example-form">
+            <mat-form-field class="input-container">
+                <mat-label>Email ou CPF</mat-label>
+                <input matInput placeholder="Digite seu email ou CPF">
+                <mat-icon matSuffix>check_circle_outline</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="input-container">
+                <mat-label>Senha</mat-label>
+                <input matInput placeholder="Digite sua senha" type="password">
+                <mat-icon matSuffix>check_circle_outline</mat-icon>
+            </mat-form-field>
 
             <button type="button" class="btn-acessar">Acessar</button>
         </form>
-        <a href="#" class="forgot-password">Esqueceu sua senha? Acesse aqui</a>
-        <p class="version">Versão 0.01</p>
+
+        <p class="paragrafoLogin espacamentoEsqueceu">
+            Esqueceu sua senha? <a href="#" class="forgot-password">Acesse aqui</a>
+        </p>
+        
+        <p class="paragrafoVersao">Versão 0.01</p>
     </div>
-    <div class="side-section">
-    </div>
+    <div class="side-section"></div>
 </div>
