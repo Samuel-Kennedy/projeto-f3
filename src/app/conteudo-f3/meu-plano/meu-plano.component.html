@@ -19,7 +19,7 @@
         </div>
 
         <div class="options-list">
-            <div class="option-item" (click)="alterarCor(0)">
+            <div class="option-item" (click)="alterarCorEventos(0)">
                 <mat-icon [ngClass]="{'active-icon': isClicked[0]}"
                     class="option-icon material-icons-outlined">request_quote</mat-icon>
                 <span [ngClass]="{'active-text': isClicked[0]}">Ver Extrato</span>
@@ -28,8 +28,9 @@
                         class="arrow-icon material-icons-outlined">chevron_right</mat-icon>
                 </div>
             </div>
-            <hr class="divider">        
-            <div class="option-item" (click)="alterarCor(1)">
+            <hr class="divider">
+
+            <div class="option-item" (click)="alterarCorEventos(1)">
                 <mat-icon [ngClass]="{'active-icon': isClicked[1]}"
                     class="option-icon material-icons-outlined">mail</mat-icon>
                 <span [ngClass]="{'active-text': isClicked[1]}">Contribuição Mensal</span>
@@ -40,7 +41,7 @@
             </div>
             <hr class="divider">
 
-            <div class="option-item" (click)="alterarCor(2)">
+            <div class="option-item" (click)="alterarCorEventos(2)">
                 <mat-icon [ngClass]="{'active-icon': isClicked[2]}"
                     class="option-icon material-icons-outlined">local_atm</mat-icon>
                 <span [ngClass]="{'active-text': isClicked[2]}">Contribuição Extra</span>
@@ -51,7 +52,7 @@
             </div>
             <hr class="divider">
 
-            <div class="option-item" (click)="alterarCor(3)">
+            <div class="option-item" (click)="alterarCorEventos(3)">
                 <mat-icon [ngClass]="{'active-icon': isClicked[3]}"
                     class="option-icon material-icons-outlined">description</mat-icon>
                 <span [ngClass]="{'active-text': isClicked[3]}">Documentos</span>
@@ -62,7 +63,7 @@
             </div>
             <hr class="divider">
 
-            <div class="option-item" (click)="alterarCor(4)">
+            <div class="option-item" (click)="alterarCorEventos(4)">
                 <mat-icon [ngClass]="{'active-icon': isClicked[4]}"
                     class="option-icon material-icons-outlined">trending_up</mat-icon>
                 <span [ngClass]="{'active-text': isClicked[4]}">Regime de Tributação</span>
@@ -73,10 +74,12 @@
             </div>
             <hr class="divider">
 
-            <div class="option-item" (click)="alterarCor(5)">
-                <div class="chat-with-dollar">
-                    <mat-icon class="material-icons-outlined">chat_bubble_outline</mat-icon>
-                    <span class="dollar-symbol">$</span>
+            <div class="option-item" (click)="alterarCorEventos(5)">
+                <div class="chat-with-dollar arrow-wrapper">
+                    <mat-icon [ngClass]="{'active-icon': isClicked[5]}" class="option-icon material-icons-outlined"
+                        class="option-icon arrow-icon material-icons-outlined">chat_bubble_outline</mat-icon>
+                    <span [ngClass]="{'active-text': isClicked[5]}"
+                        class="option-icon arrow-icon dollar-symbol">$</span>
                 </div>
                 <span [ngClass]="{'active-text': isClicked[5]}">Solicitar Benefício</span>
                 <div class="arrow-wrapper">
@@ -86,7 +89,7 @@
             </div>
             <hr class="divider">
 
-            <div class="option-item" (click)="alterarCor(6)">
+            <div class="option-item" (click)="alterarCorEventos(6)">
                 <mat-icon [ngClass]="{'active-icon': isClicked[6]}"
                     class="option-icon material-icons-outlined">assessment</mat-icon>
                 <span [ngClass]="{'active-text': isClicked[6]}">Extrato Regressivo</span>
@@ -97,7 +100,7 @@
             </div>
             <hr class="divider">
 
-            <div class="option-item" (click)="alterarCor(7)">
+            <div class="option-item" (click)="alterarCorEventos(7)">
                 <mat-icon [ngClass]="{'active-icon': isClicked[7]}"
                     class="option-icon material-icons-outlined">info</mat-icon>
                 <span [ngClass]="{'active-text': isClicked[7]}">Informações</span>
@@ -109,7 +112,9 @@
             <hr class="divider">
         </div>
     </div>
-
-    <app-info-menu></app-info-menu>
-
+    <app-info-menu *ngIf="selectedOption" [titulo]="selectedOption.title" [icon]="selectedOption.icon"
+        [valorContribuicao]="selectedOption.value" [tituloValorContribuicao]="selectedOption.subtitle"
+        [tituloPorcentagemSalario]="selectedOption.tituloPorcentagemSalario"
+        [porcentagemSalario]="selectedOption.porcentagemSalario" [descricaoBotao]="selectedOption.buttonText">
+    </app-info-menu>
 </div>
