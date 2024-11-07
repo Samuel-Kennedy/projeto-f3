@@ -25,7 +25,8 @@ export class MeuPlanoComponent {
       tituloPorcentagemSalario: 'Porcentagem do salário',
       porcentagemSalario: '5%',
       value: 'R$ 500,00',
-      buttonText: 'ALTERAR CONTRIBUIÇÃO'
+      buttonText: 'ALTERAR CONTRIBUIÇÃO',
+      botaoSecundario: 'INCLUIR CONTRIBUIÇÃO',
     },
     {
       icon: 'local_atm',

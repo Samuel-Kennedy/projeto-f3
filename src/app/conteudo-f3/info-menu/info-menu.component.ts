@@ -13,7 +13,7 @@ export class InfoMenuComponent {
   @Input() descricaoBotao: string = '';
   @Input() tituloValorContribuicao: string = '';
   @Input() tituloPorcentagemSalario: string = '';
-
+  @Input() botaoSecundario: string = '';
 
   ngOnInit(): void { }
 }
