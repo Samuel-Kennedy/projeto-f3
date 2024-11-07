@@ -86,15 +86,9 @@ export class MeuPlanoComponent {
   }
   alterarCorEventos(index: number): void {
     this.isClicked = this.isClicked.map((_, i) => i === index ? true : false);
-    this.alterarCorEventos(1);
     this.selectedOption = this.options[index];
     this.cdRef.detectChanges();
   }
-
-  manda() {
-    this.router.navigate(['/login']);
-  }
-
 
 }
 
