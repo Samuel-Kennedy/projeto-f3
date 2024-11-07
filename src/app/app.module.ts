@@ -13,6 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MeuPlanoComponent } from './conteudo-f3/meu-plano/meu-plano.component';
+import { InfoMenuComponent } from './conteudo-f3/info-menu/info-menu.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { MeuPlanoComponent } from './conteudo-f3/meu-plano/meu-plano.component';
     HomeComponent,
     LoginComponent,
     HeaderComponent,
-    MeuPlanoComponent
+    MeuPlanoComponent,
+    InfoMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { MeuPlanoComponent } from './conteudo-f3/meu-plano/meu-plano.component';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
