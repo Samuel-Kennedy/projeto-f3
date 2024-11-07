@@ -1,0 +1,47 @@
+<div class="info-menu-container">
+    <mat-card appearance="outlined" class="info-card">
+        <mat-card-header>
+            <div class="mat-card-title-container">
+                <div class="title-left">
+                    <mat-icon class="option-icon material-icons-outlined">{{ icon }}</mat-icon>
+                </div>
+                <span class="title-text">{{ titulo }}</span>
+                <div class="title-right">
+                    <mat-icon class="arrow-icon material-icons-outlined corIconSeta">chevron_right</mat-icon>
+                </div>
+            </div>
+        </mat-card-header>
+        <hr class="divider-top">
+        <div class="subTituloCard alinhamentoValores">
+            <mat-card-subtitle>{{ tituloValorContribuicao }}</mat-card-subtitle>
+            <mat-card-subtitle class="title-semibold-h6">{{ valorContribuicao }}</mat-card-subtitle>
+        </div>
+        <div class="subTituloCard alinhamentoValores">
+            <mat-card-subtitle>{{ tituloPorcentagemSalario }}</mat-card-subtitle>
+            <mat-card-subtitle class="title-semibold-h6">{{ porcentagemSalario }}</mat-card-subtitle>
+        </div>
+        <button mat-button class="label-button">{{ descricaoBotao }}</button>
+    </mat-card>
+
+    <mat-card appearance="outlined" class="info-card">
+        <mat-card-header>
+            <div class="mat-card-title-container">
+                <div class="title-left">
+                    <mat-icon class="option-icon material-icons-outlined">{{ icon }}</mat-icon>
+                </div>
+                <span class="title-text">{{ titulo }}</span>
+                <div class="title-right">
+                    <mat-icon class="arrow-icon material-icons-outlined corIconSeta">chevron_right</mat-icon>
+                </div>
+            </div>
+        </mat-card-header>
+        <hr class="divider-top">
+        <div class="subTituloCard alinhamentoValores">
+            <mat-card-subtitle>{{ tituloValorContribuicao }}</mat-card-subtitle>
+            <mat-card-subtitle class="title-semibold-h6">{{ valorContribuicao }}</mat-card-subtitle>
+        </div>
+        <button mat-button class="label-button">{{ descricaoBotao }}</button>
+    </mat-card>
+    <button *ngIf="botaoSecundario" type="button" class="btn-acessar">{{ botaoSecundario }}</button>
+</div>
+
