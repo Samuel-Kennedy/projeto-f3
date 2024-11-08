@@ -32,6 +32,12 @@ Em seguida realize o comando `ng serve` e acesse http://localhost:4200/, você s
 - Seta do meu plano (home).
 - Responsividade em Aparelho celulares, faltando apenas a parte de contribuições para retornar, tendo a possibilidade apenas voltar ao meu plano e inicializar no mensal, porém poderá ser considerado extra de acordo com o Figma.
 
+# Como rodar os testes unitários
+
+Basta realizar o seguinte comando -> **npx jest --coverage**
+Será possível gerar uma pasta que será disponibilizada o coverage, isto te dará a acesso a visualizar a porcentagem de cobertura de teste para cada component.
+Obs: Todo o component está com 100% de cobertura de teste.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
