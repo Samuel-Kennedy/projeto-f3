@@ -9,7 +9,7 @@ Este é um projeto da Navega, visa realizar a administração do seu Plano, tend
 
 Após baixar realizar o seguinte comando -> **npm install --legacy-peer-deps**
 
-Em seguida realize o comando `ng serve` você será redirecionado por padrão para aba de acessar, você pode colocar seu e-mail e senha, porém o sistema não possui validações ou itens do gênero, basta clicar em acessar que você será redirecionado para a parte de home, neste cenário será possível navegar pelos botões, as informações no card a baixo estão de forma dinâmica, sendo apenas o gráfico não sendo dinâmico, caso queira voltar ao login basta clicar no canto superior esquerdo na seta ao lado esquerdo do plano e você poderá voltar para a parte inicial.
+Em seguida realize o comando `ng serve` e acesse http://localhost:4200/, você será redirecionado por padrão para aba de acessar, você pode colocar seu e-mail e senha, porém o sistema não possui validações ou itens do gênero, basta clicar em acessar que você será redirecionado para a parte de home, neste cenário será possível navegar pelos botões, as informações no card a baixo estão de forma dinâmica, sendo apenas o gráfico não sendo dinâmico, caso queira voltar ao login basta clicar no canto superior esquerdo na seta ao lado esquerdo do plano e você poderá voltar para a parte inicial.
 
 # Itens Não funcionais
 
