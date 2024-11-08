@@ -10,12 +10,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MeuPlanoComponent } from './conteudo-f3/meu-plano/meu-plano.component';
+import { InfoMenuComponent } from './conteudo-f3/info-menu/info-menu.component';
+import {MatCardModule} from '@angular/material/card';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    MeuPlanoComponent,
+    InfoMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +33,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    MatCardModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
