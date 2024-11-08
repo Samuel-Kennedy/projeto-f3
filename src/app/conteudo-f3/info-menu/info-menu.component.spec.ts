@@ -1,7 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InfoMenuComponent } from './info-menu.component';
-
+jest.mock('@swimlane/ngx-charts', () => ({
+  LegendPosition: {
+    Below: 'below',
+    Above: 'above',
+  }
+}));
 describe('InfoMenuComponent', () => {
   let component: InfoMenuComponent;
   let fixture: ComponentFixture<InfoMenuComponent>;
