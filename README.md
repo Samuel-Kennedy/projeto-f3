@@ -36,6 +36,7 @@ Em seguida realize o comando `ng serve` e acesse http://localhost:4200/, você s
 
 Basta realizar o seguinte comando -> **npx jest --coverage**
 Será possível gerar uma pasta que será disponibilizada o coverage, isto te dará a acesso a visualizar a porcentagem de cobertura de teste para cada component.
+Exemplo do caminho: D:\projetos\projeto-f3\coverage\lcov-report\index.html
 Obs: Todo o component está com 100% de cobertura de teste.
 
 ## Development server
