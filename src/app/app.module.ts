@@ -15,6 +15,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MeuPlanoComponent } from './conteudo-f3/meu-plano/meu-plano.component';
 import { InfoMenuComponent } from './conteudo-f3/info-menu/info-menu.component';
 import {MatCardModule} from '@angular/material/card';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatIconModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
