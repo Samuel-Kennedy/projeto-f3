@@ -7,7 +7,7 @@
     </div>
     <hr class="divider-top">
 
-    <div class="tamanhoTelaSelecao">
+    <div *ngIf="!isMobile" class="tamanhoTelaSelecao">
         <div class="profile-section">
             <div class="profile-icon-wrapper">
                 <mat-icon class="profile-icon material-icons-outlined">perm_identity</mat-icon>
@@ -112,7 +112,13 @@
             <hr class="divider">
         </div>
     </div>
-    <app-info-menu *ngIf="selectedOption" [titulo]="selectedOption.title" [icon]="selectedOption.icon"
+    <app-info-menu *ngIf="isMobile" [titulo]="selectedOption.title" [icon]="selectedOption.icon"
+        [valorContribuicao]="selectedOption.value" [tituloValorContribuicao]="selectedOption.subtitle"
+        [tituloPorcentagemSalario]="selectedOption.tituloPorcentagemSalario"
+        [porcentagemSalario]="selectedOption.porcentagemSalario" [descricaoBotao]="selectedOption.buttonText"
+        [botaoSecundario]="selectedOption.botaoSecundario">
+    </app-info-menu>
+    <app-info-menu *ngIf="!isMobile" [titulo]="selectedOption.title" [icon]="selectedOption.icon"
         [valorContribuicao]="selectedOption.value" [tituloValorContribuicao]="selectedOption.subtitle"
         [tituloPorcentagemSalario]="selectedOption.tituloPorcentagemSalario"
         [porcentagemSalario]="selectedOption.porcentagemSalario" [descricaoBotao]="selectedOption.buttonText"

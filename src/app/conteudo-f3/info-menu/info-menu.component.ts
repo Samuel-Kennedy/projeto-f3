@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { LegendPosition } from '@swimlane/ngx-charts';
 
 @Component({
@@ -6,8 +6,7 @@ import { LegendPosition } from '@swimlane/ngx-charts';
   templateUrl: './info-menu.component.html',
   styleUrls: ['./info-menu.component.less']
 })
-
-export class InfoMenuComponent {
+export class InfoMenuComponent implements OnInit, OnDestroy {
 
   doughnutChartData = [
     {
@@ -20,7 +19,7 @@ export class InfoMenuComponent {
     },
   ];
   legendPosition: LegendPosition = LegendPosition.Below;
-
+  isMobile: boolean = false;
   @Input() titulo: string = '';
   @Input() icon: string = '';
   @Input() valorContribuicao: string = '';
@@ -30,5 +29,18 @@ export class InfoMenuComponent {
   @Input() tituloPorcentagemSalario: string = '';
   @Input() botaoSecundario: string = '';
 
-  ngOnInit(): void { }
+  constructor() { }
+
+  ngOnInit(): void {
+    this.checkMobileScreen();
+    window.addEventListener('resize', this.checkMobileScreen.bind(this));
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.checkMobileScreen.bind(this));
+  }
+
+  checkMobileScreen(): void {
+    this.isMobile = window.innerWidth <= 768;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
 
@@ -7,7 +7,7 @@ import { ChangeDetectorRef } from '@angular/core';
   templateUrl: './meu-plano.component.html',
   styleUrls: ['./meu-plano.component.less']
 })
-export class MeuPlanoComponent {
+export class MeuPlanoComponent implements OnInit, OnDestroy {
   isClicked: boolean[] = [false, false, false, false, false, false, false, false];
 
   options = [
@@ -71,25 +71,34 @@ export class MeuPlanoComponent {
       buttonText: 'CONSULTAR INFORMAÇÕES'
     }
   ];
-
+  isMobile: boolean = false;
 
   selectedOption: any;
 
-  constructor(private router: Router, private cdRef: ChangeDetectorRef) { }
-
+  constructor(private router: Router, private cdRef: ChangeDetectorRef) {
+    this.checkMobileScreen();
+  }
 
   ngOnInit(): void {
     this.alterarCorEventos(1);
+    window.addEventListener('resize', this.checkMobileScreen.bind(this));
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.checkMobileScreen.bind(this));
+  }
+
+  checkMobileScreen(): void {
+    this.isMobile = window.innerWidth <= 768;
   }
 
   enviarLogin(): void {
     this.router.navigate(['/login']);
   }
+
   alterarCorEventos(index: number): void {
     this.isClicked = this.isClicked.map((_, i) => i === index ? true : false);
     this.selectedOption = this.options[index];
     this.cdRef.detectChanges();
   }
-
 }
-

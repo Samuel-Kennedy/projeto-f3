@@ -28,6 +28,7 @@ Após rodar o comando `ng serve` você será redirecionado por padrão para aba 
 - Funcionalidade do gráfico
 - Botões do home dinâmicos juntamente com o card, informações dinâmicas.
 - Seta do meu plano (home).
+- Responsividade em Aparelho celulares, faltando apenas a parte de contribuições para retornar, tendo a possibilidade apenas voltar ao meu plano e inicializar no mensal, porém poderá ser considerado extra de acordo com o Figma.
 
 ## Development server
 
